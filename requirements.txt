@@ -1,0 +1,118 @@
+**Installation Requirements Guide**
+
+1. PREREQUISITES
+   - **Python 3.8+ Installation**: 
+     Download and install Python 3.8 or higher from the official Python website. Ensure to check the box that says "Add Python to PATH" during installation.
+   - **Required Python Libraries with Installation Commands**: 
+     Ensure you have pip installed, which comes with Python installations. 
+   - **Windows-Specific Requirements**: 
+     Ensure you have administrative privileges to install software and libraries.
+
+2. LIBRARIES TO INSTALL (with pip commands)
+   - Core GUI: 
+     ```
+     pip install tk
+     pip install ttk
+     ```
+   - Mathematical operations: 
+     ```
+     pip install numpy
+     pip install scipy
+     ```
+   - Linear programming solver: 
+     ```
+     pip install pulp
+     ```
+   - Data handling: 
+     ```
+     pip install pandas
+     ```
+   - Plotting: 
+     ```
+     pip install matplotlib
+     ```
+   - PDF generation: 
+     ```
+     pip install reportlab
+     pip install fpdf
+     ```
+   - Excel export: 
+     ```
+     pip install openpyxl
+     pip install xlsxwriter
+     ```
+   - Table styling: 
+     ```
+     pip install tkintertable
+     pip install ttkthemes
+     ```
+   - Portable executable: 
+     ```
+     pip install pyinstaller
+     pip install auto-py-to-exe
+     ```
+
+3. STEP-BY-STEP INSTALLATION
+   - **Open Command Prompt as Administrator**: 
+     Right-click on the Command Prompt icon and select "Run as administrator."
+   - **Create Virtual Environment (Optional but Recommended)**: 
+     ```
+     python -m venv simplex_solver_env
+     simplex_solver_env\Scripts\activate
+     ```
+   - **Install All Required Packages with Exact pip Commands**: 
+     Copy and paste the pip commands from the previous section to install the necessary libraries.
+   - **Verify Installations**: 
+     Check if the libraries are installed correctly by running:
+     ```
+     pip list
+     ```
+
+4. CREATING PORTABLE EXECUTABLE
+   - **Using PyInstaller with Detailed Command**: 
+     Navigate to your project directory and run:
+     ```
+     pyinstaller --onefile your_script.py
+     ```
+   - **Using Auto-Py-To-Exe (GUI Method)**: 
+     Launch Auto-Py-To-Exe and follow the GUI prompts to select your script and configure settings. Click "Convert .py to .exe" to build the executable.
+   - **Bundling All Dependencies**: 
+     Ensure the "One Directory" option is selected in Auto-Py-To-Exe to include all dependencies.
+   - **Testing the Executable**: 
+     Navigate to the `dist` folder and run the generated executable to ensure it works correctly.
+
+5. FOLDER STRUCTURE SETUP
+   - **Creating Desktop\Navid_OR Folder**: 
+     Open Command Prompt and run:
+     ```
+     mkdir "%USERPROFILE%\Desktop\Navid_OR"
+     ```
+   - **Subfolders: Reports, Models, Exports**: 
+     ```
+     mkdir "%USERPROFILE%\Desktop\Navid_OR\Reports"
+     mkdir "%USERPROFILE%\Desktop\Navid_OR\Models"
+     mkdir "%USERPROFILE%\Desktop\Navid_OR\Exports"
+     ```
+   - **Sample Problem Files**: 
+     Place sample problem files in the `Models` folder for testing.
+
+6. TROUBLESHOOTING
+   - **Common Installation Errors and Solutions**: 
+     Ensure you have the correct version of Python and all dependencies are installed.
+   - **DLL Missing Errors on Windows**: 
+     Reinstall the libraries or install the missing DLLs separately.
+   - **Antivirus False Positives**: 
+     Temporarily disable your antivirus or add exceptions for the application.
+   - **Path Issues**: 
+     Ensure Python and pip are added to your system PATH.
+
+7. QUICK START GUIDE
+   - **How to Run the Python Script**: 
+     Navigate to the directory containing your script and run:
+     ```
+     python your_script.py
+     ```
+   - **How to Run the Portable Executable**: 
+     Double-click the executable file located in the `dist` folder.
+   - **Sample Problems to Test**: 
+     Use the sample problem files placed in the `Models` folder to test the application functionality.

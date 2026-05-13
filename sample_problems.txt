@@ -1,0 +1,193 @@
+**Sample Linear Programming Problems**
+
+---
+
+**1. 2-VARIABLE PROBLEMS**
+
+**Problem 1: Maximization with <= constraints**
+- **Description:** Maximize profit from two products.
+- **Objective Function:** Maximize Z = 3x + 4y
+- **Constraints:**
+  - x + 2y <= 8
+  - 3x + y <= 12
+  - x >= 0, y >= 0
+- **Expected Solution:** (2, 3)
+- **Recommended Method:** Simplex
+- **What to Test:** Plotting feasible region and optimal solution.
+
+---
+
+**Problem 2: Minimization with >= constraints**
+- **Description:** Minimize cost while meeting production requirements.
+- **Objective Function:** Minimize C = 5x + 2y
+- **Constraints:**
+  - x + y >= 10
+  - 2x + 3y >= 24
+  - x >= 0, y >= 0
+- **Expected Solution:** (0, 10)
+- **Recommended Method:** Simplex
+- **What to Test:** Reports on optimal solution and sensitivity analysis.
+
+---
+
+**Problem 3: Mixed constraints (<=, >=, =)**
+- **Description:** Optimize resource allocation with mixed constraints.
+- **Objective Function:** Maximize R = 2x + 5y
+- **Constraints:**
+  - x + y <= 7
+  - 2x - y >= 3
+  - x + 3y = 12
+  - x >= 0, y >= 0
+- **Expected Solution:** (3, 4)
+- **Recommended Method:** Simplex
+- **What to Test:** Feasibility and optimality reports.
+
+---
+
+**Problem 4: Unbounded problem**
+- **Description:** Maximize profit without upper limits.
+- **Objective Function:** Maximize P = 2x + 3y
+- **Constraints:**
+  - x - y <= 3
+  - y >= 0
+- **Expected Solution:** Unbounded
+- **Recommended Method:** Simplex
+- **What to Test:** Identification of unboundedness in reports.
+
+---
+
+**Problem 5: Infeasible problem**
+- **Description:** Attempt to meet conflicting constraints.
+- **Objective Function:** Minimize C = x + y
+- **Constraints:**
+  - x + y >= 5
+  - x + y <= 3
+  - x >= 0, y >= 0
+- **Expected Solution:** Infeasible
+- **Recommended Method:** Simplex
+- **What to Test:** Infeasibility detection in reports.
+
+---
+
+**2. 3+ VARIABLE PROBLEMS**
+
+**Problem 6: Standard maximization (all <=)**
+- **Description:** Maximize production output.
+- **Objective Function:** Maximize Z = 4x1 + 3x2 + 2x3
+- **Constraints:**
+  - x1 + x2 + x3 <= 10
+  - 2x1 + x2 <= 12
+  - x1, x2, x3 >= 0
+- **Expected Solution:** (6, 2, 0)
+- **Recommended Method:** Simplex
+- **What to Test:** Feasible region and optimal solution.
+
+---
+
+**Problem 7: Standard minimization (all >=)**
+- **Description:** Minimize total costs.
+- **Objective Function:** Minimize C = 3x1 + 2x2 + 4x3
+- **Constraints:**
+  - x1 + 2x2 + x3 >= 15
+  - 3x1 + x2 >= 10
+  - x1, x2, x3 >= 0
+- **Expected Solution:** (0, 5, 5)
+- **Recommended Method:** Simplex
+- **What to Test:** Cost reports and optimality.
+
+---
+
+**Problem 8: Mixed constraints requiring Two-Phase**
+- **Description:** Optimize services with mixed constraints.
+- **Objective Function:** Maximize S = 5x1 + 6x2
+- **Constraints:**
+  - x1 + x2 <= 8
+  - 2x1 + 3x2 >= 12
+  - x1 + x2 = 4
+  - x1, x2 >= 0
+- **Expected Solution:** (4, 0)
+- **Recommended Method:** Two-Phase Simplex
+- **What to Test:** Transition from Phase 1 to Phase 2.
+
+---
+
+**Problem 9: Equality constraints**
+- **Description:** Allocate resources with strict requirements.
+- **Objective Function:** Minimize C = 2x1 + 3x2
+- **Constraints:**
+  - x1 + x2 = 6
+  - 2x1 + x2 >= 8
+  - x1, x2 >= 0
+- **Expected Solution:** (4, 2)
+- **Recommended Method:** Simplex
+- **What to Test:** Handling of equality constraints.
+
+---
+
+**Problem 10: Degenerate problem**
+- **Description:** Optimize with potential for multiple solutions.
+- **Objective Function:** Maximize Z = x1 + x2
+- **Constraints:**
+  - x1 + x2 <= 5
+  - x1 + 2x2 <= 10
+  - 2x1 + x2 <= 10
+  - x1, x2 >= 0
+- **Expected Solution:** Multiple solutions along the line x1 + x2 = 5
+- **Recommended Method:** Simplex
+- **What to Test:** Identification of degeneracy in the solution.
+
+---
+
+**Special Cases**
+
+**Problem 11: Big-M method required**
+- **Description:** Solve with artificial variables.
+- **Objective Function:** Minimize C = x1 + 2x2
+- **Constraints:**
+  - x1 + x2 >= 4
+  - x1 - x2 <= 2
+  - x1, x2 >= 0
+- **Expected Solution:** (4, 0)
+- **Recommended Method:** Big-M Method
+- **What to Test:** Use of artificial variables.
+
+---
+
+**Problem 12: Dual simplex recommended**
+- **Description:** Optimize while maintaining feasibility.
+- **Objective Function:** Maximize P = 5x1 + 3x2
+- **Constraints:**
+  - x1 + x2 <= 10
+  - x1 - x2 >= 2
+  - x1, x2 >= 0
+- **Expected Solution:** (6, 4)
+- **Recommended Method:** Dual Simplex
+- **What to Test:** Transitioning between primal and dual solutions.
+
+---
+
+**Problem 13: Revised simplex for larger problems**
+- **Description:** Optimize a large-scale resource allocation.
+- **Objective Function:** Maximize Z = 2x1 + 3x2 + 5x3 + 4x4
+- **Constraints:**
+  - x1 + x2 + x3 + x4 <= 20
+  - 2x1 + 3x2 + x3 >= 15
+  - x1, x2, x3, x4 >= 0
+- **Expected Solution:** (5, 5, 0, 10)
+- **Recommended Method:** Revised Simplex
+- **What to Test:** Efficiency in larger datasets.
+
+---
+
+**Problem 14: Sensitivity analysis examples**
+- **Description:** Analyze changes in constraints and objective coefficients.
+- **Objective Function:** Maximize Z = 3x1 + 4x2
+- **Constraints:**
+  - x1 + 2x2 <= 10
+  - 3x1 + x2 <= 12
+  - x1, x2 >= 0
+- **Expected Solution:** (2, 3)
+- **Recommended Method:** Simplex
+- **What to Test:** Sensitivity reports on objective function coefficients and constraints.
+
+---
