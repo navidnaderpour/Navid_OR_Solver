@@ -1,19 +1,6 @@
-# Python
-__pycache__/
-*.pyc
-
-# Build
 dist/
 build/
+*.exe
 *.spec
-
-# Images (optional)
-network_graph_preview.png
-
-# Office files
-*.pptx
-*.pdf
-
-# OS
-.DS_Store
-Thumbs.db
+*.png
+__pycache__/
