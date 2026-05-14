@@ -1,0 +1,3 @@
+git add .
+git commit -m "Add main OR solver launcher"
+git push
